@@ -14,7 +14,7 @@ if password:
     tn.write(password.encode('ascii') + b"\n")
 
 tn.write(b"enable\n")
-tn.write(b"interop19\n")
+tn.write(b"EnablePassword\n")
 tn.write(b"conf t\n")
 tn.write(b"end\n")
 tn.write(b"exit\n")
