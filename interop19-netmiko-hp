@@ -1,0 +1,12 @@
+from netmiko import ConnectHandler
+
+hp_procurve = {
+    'device_type': 'hp_procurve',
+    'host': '10.10.2.148',
+    'username': 'interop',
+    'password': 'interop19',
+  }
+
+net_connect = ConnectHandler(**hp_procurve)
+output = net_connect.send_command('show int brief')
+print (output)
